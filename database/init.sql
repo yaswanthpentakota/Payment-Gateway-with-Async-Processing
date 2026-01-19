@@ -10,8 +10,7 @@ CREATE TABLE IF NOT EXISTS merchants (
     webhook_secret VARCHAR(64),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
-
--- Payments Table
+-- Payments Table   
 CREATE TABLE IF NOT EXISTS payments (
     id VARCHAR(64) PRIMARY KEY,
     merchant_id UUID REFERENCES merchants(id) NOT NULL,
